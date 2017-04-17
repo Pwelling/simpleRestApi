@@ -1,7 +1,7 @@
 # simpleRestApi
 This simple REST-API I've made as result of a job-interview
 
-You can find a working copy at elastique.welling-online.eu
+You can find a working copy at http://elastique.welling-online.eu
 
 available calls:
 - /books/highlighted
