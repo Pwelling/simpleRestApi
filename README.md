@@ -1,5 +1,5 @@
 # simpleRestApi
-This simple REST-API I've made as result of a job-interview
+This simple REST-API I've made as result of a job-interview, using Symfony
 
 You can find a working copy at http://elastique.welling-online.eu
 
