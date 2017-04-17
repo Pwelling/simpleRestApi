@@ -12,3 +12,7 @@ available calls:
 - /authors/list
 - /publishers/{id}
 - /publishers/list
+
+You need to setup a database and create the tables using:
+
+php bin/console doctrine:schema:update --force
