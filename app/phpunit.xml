@@ -1,0 +1,7 @@
+<testsuites>
+    <testsuite name="Elastique">
+        <directory>../Tests</directory>
+        <directory>../src/*/*Bundle/Tests</directory>
+        <directory>../src/*/Bundle/*Bundle/Tests</directory>
+    </testsuite>
+</testsuites>

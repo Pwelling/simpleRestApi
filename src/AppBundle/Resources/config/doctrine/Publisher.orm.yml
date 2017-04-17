@@ -1,0 +1,21 @@
+AppBundle\Entity\Publisher:
+  type: entity
+  table: null
+  id:
+    id:
+      type: integer
+      id: true
+      column: pub_id
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      column: pub_name
+      type: string
+      length: 255
+  oneToMany:
+    books:
+      targetEntity: Book
+      cascade: ["persist"]
+      orphanRemoval: true
+      mappedBy: publisher

@@ -1,0 +1,43 @@
+getBook:
+  path: /books/{id}
+  requirements: { id: \d+ }
+  methods: [GET]
+  defaults: { _controller: AppBundle:Book:get }
+
+getHighlighted:
+  path: /books/highlighted
+  methods: [GET]
+  defaults: { _controller: AppBundle:Book:highlighted }
+
+searchBookPaked:
+  path: /books/search/{title}/{offset}/{limit}
+  requirements: { offset: \d+, limit: \d+ }
+  methods: [GET]
+  defaults: { _controller: AppBundle:Book:search }
+
+searchBook:
+  path: /books/search/{title}
+  methods: [GET]
+  defaults: { _controller: AppBundle:Book:search }
+
+getAuthor:
+  path: /authors/{id}
+  requirements: { id: \d+ }
+  methods: [GET]
+  defaults: { _controller: AppBundle:Author:get }
+
+getAuthors:
+  path: /authors/list
+  methods: [GET]
+  defaults: { _controller: AppBundle:Author:list }
+
+getPublisher:
+  path: /publishers/{id}
+  requirements: { id: \d+ }
+  methods: [GET]
+  defaults: { _controller: AppBundle:Publisher:get }
+
+getPublishers:
+  path: /publishers/list
+  methods: [GET]
+  defaults: { _controller: AppBundle:Publisher:list }

@@ -1,0 +1,36 @@
+AppBundle\Entity\Book:
+  type: entity
+  table: null
+  repositoryClass: AppBundle\Repository\BookRepository
+  id:
+    id:
+      type: integer
+      column: boo_id
+      id: true
+      generator:
+        strategy: AUTO
+  fields:
+    title:
+      type: string
+      column: boo_title
+      length: 255
+    highlighted:
+      type: boolean
+      options:
+        default: false
+  manyToOne:
+    author:
+      targetEntity: Author
+      cascade: ["persist"]
+      inversedBy: books
+      joinColumn:
+        name: boo_aut_id
+        referencedColumnName: aut_id
+    publisher:
+      targetEntity: Publisher
+      cascade: ["persist"]
+      inversedBy: books
+      joinColumn:
+        name: boo_pub_id
+        referencedColumnName: pub_id
+

@@ -1,0 +1,21 @@
+AppBundle\Entity\Author:
+  type: entity
+  table: null
+  id:
+    id:
+      type: integer
+      id: true
+      column: aut_id
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+      column: aut_name
+      length: 255
+  oneToMany:
+    books:
+      targetEntity: Book
+      cascade: ["persist"]
+      orphanRemoval: true
+      mappedBy: author
